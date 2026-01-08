@@ -1,5 +1,10 @@
-from taxipred.backend.data_processing import clean_text
+from networkx import floyd_warshall_predecessor_and_distance
+from fastapi import FastAPI
+from taxipred.backend.data_processing import TaxiData
 
-def predict(input_text: str) -> dict:
-    x = clean_text(input_text)
-    return {"input": x, "prediction": 42}
+app = FastAPI()
+taxi_data = TaxiData()
+
+@app.get("/taxi")
+async def read_taxi_data():
+    return taxi_data.to_json()
