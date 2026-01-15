@@ -34,3 +34,32 @@ Missing values we're analysed thru comparing columns. No systematic correlation 
 
 ## Datatypes
 After handling the NULLS I fixed the datatypes. Categorical columns where changed from objects to strings.
+
+
+# MODEL DEVELOPMENT (linear regression)
+The goal of the model development was to get a baseline model for predicting the taxi prices and a establish a reference point for evaluating models later.
+
+### Outlier analysis
+Potential outliers in Trip_Price were investigated using different plots. Some trips showed pretty high prices, but the more I looked in to it I could see that those trips also were very long.
+
+Since they were realistic I decided to keep them and not remove them from the dataset.
+
+## Scikit-learn workflow
+The model dev. followed a standard sci-kit learn workflow:
+1. Split data
+The dataset were split into train|test sets.
+
+2. Preprocessing
+Categorical features were one-hot encoded and numerical features were passed through using a 'ColumnTransformer'. The preprocessing was fitted on the training data only and then applied to both train and test sets to prevent data leakage.
+
+3. Model training
+A linear regression model was trained using the preprocessed training data.
+
+4. Prediction
+The trained model was used to predict taxi prices on the test set.
+
+5. Evaluation
+Model performance was evaluated using MSE.
+
+BASELINE RESULT
+The linear regression model achieved a MAE of ~17.7, which I will be using as a baseline for comparising with other models.
