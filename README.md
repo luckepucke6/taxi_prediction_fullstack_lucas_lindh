@@ -16,11 +16,11 @@ This represents the actual taxi price and that is what the application will pred
 
 ### Feature choice
 I choose these features:
-- Time_of_Day
-- Day_of_Week
-- Passenger_Count
-- Traffic_Conditions
-- Trip_Distance_km
+- Time_of_Day -> this affects both the traffic and the demand, which affects the price.
+- Day_of_Week -> this affects if its a weekday or a weekend, weekends usually are a bit more pricy.
+- Passenger_Count -> if theres more passagers, there will be a bigger car. A bigger car -> more pricy.
+- Traffic_Conditions -> if theres for example more traffic, the ride will be longer. Longer rides -> more pricy.
+- Trip_Distance_km -> The most obvious one. The longer the ride, the pricier it gets.
 
 They are reasonable to know before the taxi ride begins.
 They are possible for the user to put in.
