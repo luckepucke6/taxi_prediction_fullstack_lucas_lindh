@@ -83,3 +83,14 @@ Random Forest was used to get a more flexible model to catch non-linear connecti
 The result for random forest was a MAE of ~16.4 and a RMSE of ~21.3.
 
 The random forest model have a better performance than the linear regression, which indicates that the model better can handle more complex connection between features and taxi price.
+
+# MODEL DEVELOPMENT - KNN
+In addition to linear regression and random forest, a KNN regressor was trained as a comparison model. Since KNN is a distance-based algorithm, feature scaling was applied before training. Several values of 'k' were evaluated using the same train|test split and evaluation metrics as the other models.
+
+The result for KNN was a MAE of ~19.5 and a RMSE of ~32.9.
+
+## Model comparison
+All model were evaluated using MAE and RMSE with an identical feature set and preprocessing pipeline. KNN achieved similair performance to the linear regression baseline but did not outperform Random Forest, which showed lower error metrics and more robust performance.
+
+## Final model selection and export
+Random forest was selected as the final model due to its superior performance and ability to capture non-linear relationships in the data. The trained mdoel and the fitted preprocessing pipeline were exportet using joblib.
