@@ -1,3 +1,12 @@
+Model evaluation
+- Linear regression:
+    - MAE = ~17.6
+    - RMSE = ~24.8
+
+- Random forest:
+    - MAE: ~16.4
+    - RMSE: 21.3
+
 # Taxipred labb
 
 The label for this lab will be the column 'Trip_Price'.
@@ -36,7 +45,7 @@ Missing values we're analysed thru comparing columns. No systematic correlation 
 After handling the NULLS I fixed the datatypes. Categorical columns where changed from objects to strings.
 
 
-# MODEL DEVELOPMENT (linear regression)
+# MODEL DEVELOPMENT - Linear Regression
 The goal of the model development was to get a baseline model for predicting the taxi prices and a establish a reference point for evaluating models later.
 
 ### Outlier analysis
@@ -59,7 +68,14 @@ A linear regression model was trained using the preprocessed training data.
 The trained model was used to predict taxi prices on the test set.
 
 5. Evaluation
-Model performance was evaluated using MSE.
+Model performance was evaluated using MSE and RMSE.
 
 BASELINE RESULT
-The linear regression model achieved a MAE of ~17.7, which I will be using as a baseline for comparising with other models.
+The linear regression model achieved a MAE of ~17.6 and RMSE ~24.8, which I will be using as a baseline for comparising with other models.
+
+# MODEL DEVELOPMENT - Random Forest
+Random Forest was used to get a more flexible model to catch non-linear connection in the data. The model was trained on the same train|test split and same feature encoding as the linear regression to secure a fair comparison.
+
+The result for random forest was a MAE of ~16.4 and a RMSE of ~21.3.
+
+The random forest model have a better performance than the linear regression, which indicates that the model better can handle more complex connection between features and taxi price.
