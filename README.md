@@ -7,6 +7,10 @@ Model evaluation
     - MAE: ~16.4
     - RMSE: 21.3
 
+- KNN:
+    - MAE: ~19.5
+    - RMSE: ~32.9
+
 # Taxipred labb
 
 The label for this lab will be the column 'Trip_Price'.
@@ -27,7 +31,7 @@ This represents the actual taxi price and that is what the application will pred
 I choose these features:
 - Time_of_Day -> this affects both the traffic and the demand, which affects the price.
 - Day_of_Week -> this affects if its a weekday or a weekend, weekends usually are a bit more pricy.
-- Passenger_Count -> if theres more passagers, there will be a bigger car. A bigger car -> more pricy.
+- Passenger_Count (REMOVED)-> if theres more passagers, there will be a bigger car. A bigger car -> more pricy.
 - Traffic_Conditions -> if theres for example more traffic, the ride will be longer. Longer rides -> more pricy.
 - Trip_Distance_km -> The most obvious one. The longer the ride, the pricier it gets.
 
