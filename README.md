@@ -25,15 +25,15 @@ The point of this EDA was to understand the datasets structure, identify a label
 With the EDA I analysed the columns, datatypes, if there we're any outliers and what to do with the NULLS.
 
 ### Label choice
-This represents the actual taxi price and that is what the application will predict for the user.
+This represents the actual taxi price and that is what the application will predict for the user. The taxi price is in USD. Will maybe change to SEK later on.
 
 ### Feature choice
 I choose these features:
-- Time_of_Day -> this affects both the traffic and the demand, which affects the price.
-- Day_of_Week -> this affects if its a weekday or a weekend, weekends usually are a bit more pricy.
+- Time_of_Day: string -> this affects both the traffic and the demand, which affects the price.
+- Day_of_Week_ string -> this affects if its a weekday or a weekend, weekends usually are a bit more pricy.
 - Passenger_Count (REMOVED)-> if theres more passagers, there will be a bigger car. A bigger car -> more pricy.
-- Traffic_Conditions -> if theres for example more traffic, the ride will be longer. Longer rides -> more pricy.
-- Trip_Distance_km -> The most obvious one. The longer the ride, the pricier it gets.
+- Traffic_Conditions: string -> if theres for example more traffic, the ride will be longer. Longer rides -> more pricy.
+- Trip_Distance_km: float -> The most obvious one. The longer the ride, the pricier it gets.
 
 They are reasonable to know before the taxi ride begins.
 They are possible for the user to put in.
