@@ -1,14 +1,10 @@
 import streamlit as st
-import pandas as pd
 import httpx
 
-API_URL = "http://127.0.0.1:8000/taxi"
+pages = [
+    st.Page("pages/home.py", title="Home"),
+    st.Page("pages/predict.py", title="Price prediction")
+]
 
-def main():
-    st.markdown("## Taxi Price Prediction Dashboard")
-    response = httpx.get(API_URL)
-    df = pd.read_json(response.text) # Konvertera JSON-svar till dataframe
-    st.dataframe(df)
-
-if __name__ == "__main__":
-    main()
+pg = st.navigation(pages)
+pg.run()
