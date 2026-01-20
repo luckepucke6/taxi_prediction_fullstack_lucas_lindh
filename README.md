@@ -25,7 +25,7 @@ The point of this EDA was to understand the datasets structure, identify a label
 With the EDA I analysed the columns, datatypes, if there we're any outliers and what to do with the NULLS.
 
 ### Label choice
-This represents the actual taxi price and that is what the application will predict for the user. The taxi price is in USD. Will maybe change to SEK later on.
+This represents the actual taxi price and that is what the application will predict for the user. The taxi price is in USD. The model predicts prices in USD, while conversion to SEK is handled at the application level.
 
 ### Feature choice
 I choose these features:
@@ -94,3 +94,14 @@ All model were evaluated using MAE and RMSE with an identical feature set and pr
 
 ## Final model selection and export
 Random forest was selected as the final model due to its superior performance and ability to capture non-linear relationships in the data. The trained mdoel and the fitted preprocessing pipeline were exportet using joblib.
+
+## Backend and API
+The trained model and preprocessing were saved using joblib and loaded into the fastapi backend.
+
+The backend exposes a '/predict' endpoint that:
+- recives trip information as JSON
+- validates input using Pydantic
+- applies the same preprocessing used during training
+- returns a predicted taxi price
+
+The model predicts prices in USD. For presentation purpose, the backend also converts the price to SEK using a fixed exchange rate.
