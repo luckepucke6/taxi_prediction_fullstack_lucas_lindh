@@ -1,5 +1,4 @@
 import streamlit as st
-import httpx
 
 pages = [
     st.Page("pages/home.py", title="Home"),
