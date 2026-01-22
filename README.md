@@ -154,3 +154,8 @@ Another challenge was structuring the project to maintain a clear separation bet
 ## LLM usage
 
 LLM were used as a support tool for conceptual guidance and debugging. 
+
+
+## Screenshots
+
+![Streamlit home page](screenshots/home_screenshot.png)
