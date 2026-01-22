@@ -159,3 +159,5 @@ LLM were used as a support tool for conceptual guidance and debugging.
 ## Screenshots
 
 ![Streamlit home page](screenshots/home_screenshot.png)
+![Streamlit price prediction page](screenshots/price_screenshot.png)
+![Streamlit map page](screenshots/map_screenshot.png)
