@@ -205,3 +205,5 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+ORS_API_KEY = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImNlNWEyMzA2MDZhMTRjZDdhYWU4MzM3NzEwYmQzYjVkIiwiaCI6Im11cm11cjY0In0="

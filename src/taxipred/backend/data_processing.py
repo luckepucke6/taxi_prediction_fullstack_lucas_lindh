@@ -16,11 +16,3 @@ class TripInput(BaseModel):
     Day_of_Week: str
     Traffic_Conditions: str
     Trip_Distance_km: float = Field(gt=0)
-
-
-trip = TripInput(
-    Time_of_Day="Afternoon",
-    Day_of_Week="Weekend",
-    Traffic_Conditions="High",
-    Trip_Distance_km=6.7
-)

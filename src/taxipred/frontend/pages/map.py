@@ -2,8 +2,9 @@ import streamlit as st
 import httpx
 import pandas as pd
 import math
+import os
 
-ORS_API_KEY = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImNlNWEyMzA2MDZhMTRjZDdhYWU4MzM3NzEwYmQzYjVkIiwiaCI6Im11cm11cjY0In0="
+ORS_API_KEY = os.getenv("ORS_API_KEY_2")
 
 
 def geocode_place(place_name):
